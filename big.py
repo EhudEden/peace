@@ -31,7 +31,9 @@ def recher_contact(nom):
     for numero in contacts.values():
         if nom in numero:
             print("Resultats de la recherche ...")
-            print(f"{numero}")
+        for x in contacts.keys():
+            if numero == contacts.get(x):
+                print(f"{x} : {numero}")
 
 print("Veuillez choisir l'une des options suivantes :")
 print("1.Ajouter un contact")
